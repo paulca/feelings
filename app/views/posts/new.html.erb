@@ -1,0 +1,18 @@
+<h1>New post</h1>
+
+<div>
+  Choose type:
+  
+  <%= link_to 'Link', '#', :class => 'link' %>
+  <%= link_to 'Post', '#', :class => 'post' %>
+  <%= link_to 'Photo', '#', :class => 'photo' %>
+  <%= link_to 'Quote', '#', :class => 'quote' %>
+</div>
+
+<%= render :partial => 'posts/forms/link' %>
+
+<%= render :partial => 'posts/forms/post' %>
+
+<%= render :partial => 'posts/forms/photo' %>
+
+<%= render :partial => 'posts/forms/quote' %>

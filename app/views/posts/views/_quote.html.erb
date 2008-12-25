@@ -1,0 +1,20 @@
+<div class="this is something i wrote">
+  <p class="the time goes here">
+    <em><%= time_ago_in_words(post.created_at) %> ago</em>
+  </p>
+
+  <p class="about">
+    I <strong><%= post.verb %></strong> this:
+  </p>
+  
+  <blockquote><%= post.content %></blockquote>
+  
+  <% if post.link.blank? %>
+    <p><strong><%= post.by %></strong></p>
+  <% else %>
+    <p><strong><%= link_to post.by, post.link %></strong></p>
+  <% end %>
+
+</div>
+
+<hr />

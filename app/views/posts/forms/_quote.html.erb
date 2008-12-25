@@ -1,0 +1,22 @@
+<div class="type" id="link">
+  <% form_for @post, :url => @post.new_record? ? posts_url : post_url do |f| %>
+    <div>
+      <%= f.label :verb, "How did this make you feel?" %>
+      I <%= f.text_field :verb %> this:
+    </div>
+    <div>
+      <%= f.label :content, "The quote" %>
+      <%= f.text_area :content %>
+    </div>
+    <div>
+      <%= f.label :by, "Who was the quote by?" %>
+      <%= f.text_field :by %>
+    </div>
+    <div>
+      <%= f.label :link, "A link to the quote" %>
+      <%= f.text_field :link %>
+    </div>
+    <%= hidden_field_tag 'post[type]', 'quote' %>
+    <%= f.submit %>
+  <% end %>
+</div>

@@ -1,0 +1,16 @@
+<div class="this is something i wrote">
+  <p class="the time goes here">
+    <em><%= time_ago_in_words(post.created_at) %> ago</em>
+  </p>
+
+  <p class="about">
+    I <strong><%= post.verb %></strong> this:
+  </p>
+          
+  <h3><%= link_to post.title, post_url(post.id) %></h3>
+          
+  <%= textilize(post.content) %>
+
+</div>
+
+<hr />

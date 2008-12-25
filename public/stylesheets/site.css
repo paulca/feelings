@@ -1,0 +1,37 @@
+/*body { background-image:url('/images/grid.png');}*/
+/*body { background-image:url('../images/face.gif');}*/
+
+div.main { text-align: center; width: 90%; margin-top:12em; font-family:Georgia, "Times New Roman"; word-spacing:.2em; letter-spacing:.1em;}
+.blue { background-color: blue;}
+
+/*.passionate { border-left: .5em solid #CC0000; }
+.sustains { border-left:  .5em solid #00CC00; }
+.pays { border-left: .5em solid purple; }
+.vision { border-left: .5em solid orange;}
+.separates { border-left: .5em solid #0000CC;}
+*/
+.things ul{ padding-left: 3em;}
+/*.things li{ border-bottom: 1px solid grey; }*/
+.things a{ width: 100%; }
+.things li:hover{ color: #FFFFFF; }
+.things li.this{ height: .5em; margin-bottom: .2em; padding-top: .8em; padding-left: 1em; cursor: pointer;}
+.things li.this a { color: #000000; }
+.things ul li { list-style-type: none; }
+.things ul li { font-size: 2em; font-weight:400;color:#333;font-family:Georgia, "Times New Roman", serif;letter-spacing:2px;word-spacing:.1em;}
+.things ul { padding-top: 0;}
+
+.stuff .took { text-align:center; width: 100%; }
+.stuff .took img { padding: 0; margin: .6em; margin-top: 0; height: 288px; }
+.stuff { line-height: 2em; width: 60em; margin: auto;}
+.stuff p.time { position: absolute; left: 3%;}
+.stuff a:hover { background-color: #035292; color: #EEEEEE; }
+
+.this hr{ margin-top: 3.8em; margin-bottom: 4.25em; }
+.stuff div.something { font-size: 1.5em; }
+.something h3 { margin-top: 0em; margin-bottom: .55em; text-align: left; line-height: 1.2em; margin-bottom:.3em;}
+.something p.about { text-align: left; color: #333333; padding-top: .3em; padding-bottom: .3em; line-height: 1.4em; margin-bottom: 0; }
+.something p.link { padding-top: 0; margin-bottom: 0em; line-height: 2em; margin-bottom: 0;}
+.something p, .something blockquote { line-height: 2.02em; padding-top: 0em; padding-bottom: 0em; word-spacing:.2em; letter-spacing:.05em; text-align: justify; margin-bottom: 2em;}
+.something blockquote { margin-top: 0em; margin-bottom: 0; padding-top: .4em;}
+.something ol li, .something ul li { line-height: 1.99em; margin-bottom: 0; padding-bottom: 0; margin-top: 0; word-spacing:.2em; letter-spacing:.05em; text-align: justify; margin-bottom: 2em;}
+.something ol, .something ul { padding:0; margin-left: 4em; margin-bottom: 0;}

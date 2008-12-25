@@ -1,0 +1,21 @@
+<%= link_to 'New', new_post_path %>
+
+<table>
+  <tr>
+    <th>Type</th>
+    <th>Title</th>
+    <th>Content</th>
+    <th>Published</th>
+  </tr>
+
+<%- @posts.each do |post| -%>
+  <tr>
+    <td><%= post.type %></td>
+    <td><%= post.title %></td>
+    <td><%= link_to post.content[0,100], edit_post_path(post.id) %></td>
+    <td><%= post.published %></td>
+    <td><%= link_to 'delete', post_path(post.id), :method => :delete, :confirm => 'Are you sure you want to delete this post?' %></td>
+  </tr>
+<%- end -%>
+
+</table>
