@@ -14889,3 +14889,257 @@ Processing PostsController#index (for 127.0.0.1 at 2008-12-25 01:18:39) [GET]
 Rendering template within layouts/application
 Rendering posts/index
 Completed in 56ms (View: 5, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing FeelingsController#index (for 127.0.0.1 at 2008-12-25 01:19:00) [GET]
+Rendering template within layouts/application
+Rendering feelings/index
+Rendered posts/views/_link (3.0ms)
+Rendered posts/views/_quote (0.6ms)
+Rendered posts/views/_link (1.8ms)
+Rendered posts/views/_link (0.8ms)
+Rendered posts/views/_post (2.6ms)
+Rendered posts/views/_link (0.7ms)
+Completed in 66ms (View: 17, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing FeelingsController#index (for 127.0.0.1 at 2008-12-25 01:21:36) [GET]
+
+
+Errno::ECONNREFUSED (Connection refused - connect(2)):
+    /usr/local/lib/ruby/1.8/net/http.rb:560:in `initialize'
+    /usr/local/lib/ruby/1.8/net/http.rb:560:in `open'
+    /usr/local/lib/ruby/1.8/net/http.rb:560:in `connect'
+    /usr/local/lib/ruby/1.8/timeout.rb:48:in `timeout'
+    /usr/local/lib/ruby/1.8/timeout.rb:76:in `timeout'
+    /usr/local/lib/ruby/1.8/net/http.rb:560:in `connect'
+    /usr/local/lib/ruby/1.8/net/http.rb:553:in `do_start'
+    /usr/local/lib/ruby/1.8/net/http.rb:542:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rest-client-0.7/lib/rest_client.rb:155:in `transmit'
+    /usr/local/lib/ruby/gems/1.8/gems/rest-client-0.7/lib/rest_client.rb:102:in `execute_inner'
+    /usr/local/lib/ruby/gems/1.8/gems/rest-client-0.7/lib/rest_client.rb:94:in `execute'
+    /usr/local/lib/ruby/gems/1.8/gems/rest-client-0.7/lib/rest_client.rb:81:in `execute'
+    /usr/local/lib/ruby/gems/1.8/gems/rest-client-0.7/lib/rest_client.rb:52:in `put'
+    /usr/local/lib/ruby/gems/1.8/gems/jchris-couchrest-0.9.12/lib/couchrest.rb:95:in `put'
+    /usr/local/lib/ruby/gems/1.8/gems/jchris-couchrest-0.9.12/lib/couchrest/core/database.rb:108:in `save'
+    /usr/local/lib/ruby/gems/1.8/gems/jchris-couchrest-0.9.12/lib/couchrest/core/model.rb:407:in `refresh_design_doc'
+    /usr/local/lib/ruby/gems/1.8/gems/jchris-couchrest-0.9.12/lib/couchrest/core/model.rb:330:in `view'
+    /usr/local/lib/ruby/gems/1.8/gems/jchris-couchrest-0.9.12/lib/couchrest/core/model.rb:308:in `method_missing'
+    /app/controllers/feelings_controller.rb:3:in `index'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (42.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing FeelingsController#index (for 127.0.0.1 at 2008-12-25 01:21:45) [GET]
+Rendering template within layouts/application
+Rendering feelings/index
+Rendered posts/views/_link (3.0ms)
+Rendered posts/views/_quote (0.6ms)
+Rendered posts/views/_link (1.8ms)
+Rendered posts/views/_link (0.7ms)
+Rendered posts/views/_post (2.5ms)
+Rendered posts/views/_link (0.8ms)
+Completed in 89ms (View: 17, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing FeelingsController#index (for 127.0.0.1 at 2008-12-25 01:22:55) [GET]
+Rendering template within layouts/application
+Rendering feelings/index
+Rendered posts/views/_link (2.5ms)
+Rendered posts/views/_quote (0.6ms)
+Rendered posts/views/_link (1.5ms)
+Rendered posts/views/_link (0.7ms)
+Rendered posts/views/_post (2.5ms)
+Rendered posts/views/_link (0.7ms)
+Completed in 221ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing FeelingsController#index (for 127.0.0.1 at 2008-12-25 01:22:57) [GET]
+Rendering template within layouts/application
+Rendering feelings/index
+Rendered posts/views/_link (2.5ms)
+Rendered posts/views/_quote (0.5ms)
+Rendered posts/views/_link (1.4ms)
+Rendered posts/views/_link (0.7ms)
+Rendered posts/views/_post (2.4ms)
+Rendered posts/views/_link (0.7ms)
+Completed in 62ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing FeelingsController#index (for 127.0.0.1 at 2008-12-25 01:23:29) [GET]
+Rendering template within layouts/application
+Rendering feelings/index
+Rendered posts/views/_link (2.6ms)
+Rendered posts/views/_quote (0.6ms)
+Rendered posts/views/_link (1.5ms)
+Rendered posts/views/_link (0.8ms)
+Rendered posts/views/_post (2.6ms)
+Rendered posts/views/_link (0.8ms)
+Completed in 136ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing FeelingsController#index (for 127.0.0.1 at 2008-12-25 01:23:34) [GET]
+Rendering template within layouts/application
+Rendering feelings/index
+Rendered posts/views/_link (2.6ms)
+Rendered posts/views/_quote (0.6ms)
+Rendered posts/views/_link (1.5ms)
+Rendered posts/views/_link (0.7ms)
+Rendered posts/views/_post (2.6ms)
+Rendered posts/views/_link (0.8ms)
+Completed in 66ms (View: 17, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing FeelingsController#index (for 127.0.0.1 at 2008-12-25 01:23:45) [GET]
+Rendering template within layouts/application
+Rendering feelings/index
+Rendered posts/views/_link (2.6ms)
+Rendered posts/views/_quote (0.6ms)
+Rendered posts/views/_link (1.4ms)
+Rendered posts/views/_link (0.7ms)
+Rendered posts/views/_post (2.4ms)
+Rendered posts/views/_link (0.7ms)
+Completed in 62ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing FeelingsController#index (for 127.0.0.1 at 2008-12-25 01:23:52) [GET]
+Rendering template within layouts/application
+Rendering feelings/index
+Rendered posts/views/_link (2.7ms)
+Rendered posts/views/_quote (0.6ms)
+Rendered posts/views/_link (1.4ms)
+Rendered posts/views/_link (0.7ms)
+Rendered posts/views/_post (2.7ms)
+Rendered posts/views/_link (0.8ms)
+Completed in 143ms (View: 94, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing FeelingsController#index (for 127.0.0.1 at 2008-12-25 01:24:00) [GET]
+Rendering template within layouts/application
+Rendering feelings/index
+Rendered posts/views/_link (2.5ms)
+Rendered posts/views/_quote (0.5ms)
+Rendered posts/views/_link (1.5ms)
+Rendered posts/views/_link (0.7ms)
+Rendered posts/views/_post (2.4ms)
+Rendered posts/views/_link (0.7ms)
+Completed in 66ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing FeelingsController#index (for 127.0.0.1 at 2008-12-25 01:24:03) [GET]
+Rendering template within layouts/application
+Rendering feelings/index
+Rendered posts/views/_link (2.6ms)
+Rendered posts/views/_quote (0.6ms)
+Rendered posts/views/_link (1.4ms)
+Rendered posts/views/_link (0.7ms)
+Rendered posts/views/_post (2.4ms)
+Rendered posts/views/_link (0.7ms)
+Completed in 63ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing FeelingsController#index (for 127.0.0.1 at 2008-12-25 01:24:06) [GET]
+Rendering template within layouts/application
+Rendering feelings/index
+Rendered posts/views/_link (2.6ms)
+Rendered posts/views/_quote (0.5ms)
+Rendered posts/views/_link (1.4ms)
+Rendered posts/views/_link (0.7ms)
+Rendered posts/views/_post (2.4ms)
+Rendered posts/views/_link (0.7ms)
+Completed in 63ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing FeelingsController#index (for 127.0.0.1 at 2008-12-25 01:24:13) [GET]
+Rendering template within layouts/application
+Rendering feelings/index
+Rendered posts/views/_link (2.7ms)
+Rendered posts/views/_quote (0.6ms)
+Rendered posts/views/_link (1.5ms)
+Rendered posts/views/_link (0.7ms)
+Rendered posts/views/_post (2.4ms)
+Rendered posts/views/_link (0.8ms)
+Completed in 63ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing FeelingsController#index (for 127.0.0.1 at 2008-12-25 01:24:25) [GET]
+Rendering template within layouts/application
+Rendering feelings/index
+Rendered posts/views/_link (2.6ms)
+Rendered posts/views/_quote (0.5ms)
+Rendered posts/views/_link (1.5ms)
+Rendered posts/views/_link (0.7ms)
+Rendered posts/views/_post (2.4ms)
+Rendered posts/views/_link (0.7ms)
+Completed in 63ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing FeelingsController#index (for 127.0.0.1 at 2008-12-25 01:24:34) [GET]
+Rendering template within layouts/application
+Rendering feelings/index
+Rendered posts/views/_link (2.7ms)
+Rendered posts/views/_quote (0.6ms)
+Rendered posts/views/_link (1.5ms)
+Rendered posts/views/_link (0.7ms)
+Rendered posts/views/_post (2.8ms)
+Rendered posts/views/_link (0.9ms)
+Completed in 61ms (View: 16, DB: 0) | 200 OK [http://localhost/]
