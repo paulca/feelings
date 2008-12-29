@@ -1,8 +1,7 @@
 class PostsController < ApplicationController
   
-  layout 'posts', :except => [:index, :show]
-  layout 'application', :only => [:index, :show]
-  
+  layout 'posts', :except => [:index, :show]  
+
   def index
     @posts = Post.by_date
   end

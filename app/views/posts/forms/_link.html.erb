@@ -1,17 +1,16 @@
-<div class="type" id="link">
+<div class="hidden type" id="link">
 
   <% form_for @post, :url => @post.new_record? ? posts_url : post_url do |f| %>
+    <div class="highlighted">
+      <%= f.label :link, "Link" %>
+      <%= f.text_field :link, :class => 'text' %>
+    </div>
     <div>
-      <%= f.label :verb, "How did this make you feel?" %>
-      I <%= f.text_field :verb %> this:
+      I <%= f.text_field :verb, :class => 'text' %> this:
     </div>
     <div>
       <%= f.label :title, "Title" %>
-      <%= f.text_field :title %>
-    </div>
-    <div>
-      <%= f.label :link, "Link" %>
-      <%= f.text_field :link %>
+      <%= f.text_field :title, :class => 'text' %>
     </div>
     <div>
       <%= f.label :content, "A bit about the link" %>

@@ -15143,3 +15143,1084 @@ Rendered posts/views/_link (0.7ms)
 Rendered posts/views/_post (2.8ms)
 Rendered posts/views/_link (0.9ms)
 Completed in 61ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing FeelingsController#index (for 127.0.0.1 at 2008-12-25 17:27:21) [GET]
+
+
+Errno::ECONNREFUSED (Connection refused - connect(2)):
+    /usr/local/lib/ruby/1.8/net/http.rb:560:in `initialize'
+    /usr/local/lib/ruby/1.8/net/http.rb:560:in `open'
+    /usr/local/lib/ruby/1.8/net/http.rb:560:in `connect'
+    /usr/local/lib/ruby/1.8/timeout.rb:48:in `timeout'
+    /usr/local/lib/ruby/1.8/timeout.rb:76:in `timeout'
+    /usr/local/lib/ruby/1.8/net/http.rb:560:in `connect'
+    /usr/local/lib/ruby/1.8/net/http.rb:553:in `do_start'
+    /usr/local/lib/ruby/1.8/net/http.rb:542:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rest-client-0.7/lib/rest_client.rb:155:in `transmit'
+    /usr/local/lib/ruby/gems/1.8/gems/rest-client-0.7/lib/rest_client.rb:102:in `execute_inner'
+    /usr/local/lib/ruby/gems/1.8/gems/rest-client-0.7/lib/rest_client.rb:94:in `execute'
+    /usr/local/lib/ruby/gems/1.8/gems/rest-client-0.7/lib/rest_client.rb:81:in `execute'
+    /usr/local/lib/ruby/gems/1.8/gems/rest-client-0.7/lib/rest_client.rb:52:in `put'
+    /usr/local/lib/ruby/gems/1.8/gems/jchris-couchrest-0.9.12/lib/couchrest.rb:95:in `put'
+    /usr/local/lib/ruby/gems/1.8/gems/jchris-couchrest-0.9.12/lib/couchrest/core/database.rb:108:in `save'
+    /usr/local/lib/ruby/gems/1.8/gems/jchris-couchrest-0.9.12/lib/couchrest/core/model.rb:407:in `refresh_design_doc'
+    /usr/local/lib/ruby/gems/1.8/gems/jchris-couchrest-0.9.12/lib/couchrest/core/model.rb:330:in `view'
+    /usr/local/lib/ruby/gems/1.8/gems/jchris-couchrest-0.9.12/lib/couchrest/core/model.rb:308:in `method_missing'
+    /app/controllers/feelings_controller.rb:3:in `index'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (36.4ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (0.7ms)
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing FeelingsController#index (for 127.0.0.1 at 2008-12-25 17:27:27) [GET]
+Rendering template within layouts/application
+Rendering feelings/index
+Rendered posts/views/_link (3.5ms)
+Rendered posts/views/_quote (0.7ms)
+Rendered posts/views/_link (1.8ms)
+Rendered posts/views/_link (0.8ms)
+Rendered posts/views/_post (2.5ms)
+Rendered posts/views/_link (0.7ms)
+Completed in 131ms (View: 18, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing FeelingsController#index (for 127.0.0.1 at 2008-12-27 14:26:15) [GET]
+Rendering template within layouts/application
+Rendering feelings/index
+Rendered posts/views/_link (75.7ms)
+Rendered posts/views/_quote (0.7ms)
+Rendered posts/views/_link (1.9ms)
+Rendered posts/views/_link (0.7ms)
+Rendered posts/views/_post (2.9ms)
+Rendered posts/views/_link (0.8ms)
+Completed in 732ms (View: 200, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing FeelingsController#index (for 127.0.0.1 at 2008-12-29 15:19:22) [GET]
+
+
+Errno::ECONNREFUSED (Connection refused - connect(2)):
+    /usr/local/lib/ruby/1.8/net/http.rb:560:in `initialize'
+    /usr/local/lib/ruby/1.8/net/http.rb:560:in `open'
+    /usr/local/lib/ruby/1.8/net/http.rb:560:in `connect'
+    /usr/local/lib/ruby/1.8/timeout.rb:48:in `timeout'
+    /usr/local/lib/ruby/1.8/timeout.rb:76:in `timeout'
+    /usr/local/lib/ruby/1.8/net/http.rb:560:in `connect'
+    /usr/local/lib/ruby/1.8/net/http.rb:553:in `do_start'
+    /usr/local/lib/ruby/1.8/net/http.rb:542:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rest-client-0.7/lib/rest_client.rb:155:in `transmit'
+    /usr/local/lib/ruby/gems/1.8/gems/rest-client-0.7/lib/rest_client.rb:102:in `execute_inner'
+    /usr/local/lib/ruby/gems/1.8/gems/rest-client-0.7/lib/rest_client.rb:94:in `execute'
+    /usr/local/lib/ruby/gems/1.8/gems/rest-client-0.7/lib/rest_client.rb:81:in `execute'
+    /usr/local/lib/ruby/gems/1.8/gems/rest-client-0.7/lib/rest_client.rb:52:in `put'
+    /usr/local/lib/ruby/gems/1.8/gems/jchris-couchrest-0.9.12/lib/couchrest.rb:95:in `put'
+    /usr/local/lib/ruby/gems/1.8/gems/jchris-couchrest-0.9.12/lib/couchrest/core/database.rb:108:in `save'
+    /usr/local/lib/ruby/gems/1.8/gems/jchris-couchrest-0.9.12/lib/couchrest/core/model.rb:407:in `refresh_design_doc'
+    /usr/local/lib/ruby/gems/1.8/gems/jchris-couchrest-0.9.12/lib/couchrest/core/model.rb:330:in `view'
+    /usr/local/lib/ruby/gems/1.8/gems/jchris-couchrest-0.9.12/lib/couchrest/core/model.rb:308:in `method_missing'
+    /app/controllers/feelings_controller.rb:3:in `index'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (117.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (1.0ms)
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing FeelingsController#index (for 127.0.0.1 at 2008-12-29 15:35:22) [GET]
+Rendering template within layouts/application
+Rendering feelings/index
+Rendered posts/views/_link (114.4ms)
+Rendered posts/views/_quote (1.0ms)
+Rendered posts/views/_link (2.8ms)
+Rendered posts/views/_link (1.2ms)
+Rendered posts/views/_post (4.2ms)
+Rendered posts/views/_link (1.2ms)
+Completed in 508ms (View: 135, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing FeelingsController#index (for 127.0.0.1 at 2008-12-29 15:38:29) [GET]
+Rendering template within layouts/application
+Rendering feelings/index
+Rendered posts/views/_link (2.5ms)
+Rendered posts/views/_quote (0.6ms)
+Rendered posts/views/_link (1.4ms)
+Rendered posts/views/_link (0.7ms)
+Rendered posts/views/_post (2.6ms)
+Rendered posts/views/_link (0.8ms)
+Completed in 192ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:05:02) [GET]
+Rendering posts/new
+Rendered posts/forms/_link (1.7ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 26ms (View: 12, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:06:25) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (2.1ms)
+Rendered posts/forms/_post (1.1ms)
+Rendered posts/forms/_photo (1.2ms)
+Rendered posts/forms/_quote (1.1ms)
+Completed in 123ms (View: 27, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:06:50) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (1.3ms)
+Rendered posts/forms/_photo (1.1ms)
+Rendered posts/forms/_quote (1.5ms)
+Completed in 28ms (View: 14, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:07:27) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (1.3ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 25ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-12-29 17:07:27) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:07:44) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.4ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 26ms (View: 12, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:08:07) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.6ms)
+Rendered posts/forms/_post (1.0ms)
+Rendered posts/forms/_photo (1.2ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 27ms (View: 14, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:08:22) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.6ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.1ms)
+Rendered posts/forms/_quote (1.1ms)
+Completed in 29ms (View: 15, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:08:43) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.7ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.1ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 26ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:09:09) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.4ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 24ms (View: 12, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:09:21) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.4ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 23ms (View: 12, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:09:26) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.6ms)
+Rendered posts/forms/_post (1.0ms)
+Rendered posts/forms/_photo (1.1ms)
+Rendered posts/forms/_quote (86.1ms)
+Completed in 115ms (View: 99, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:09:59) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.2ms)
+Rendered posts/forms/_quote (1.1ms)
+Completed in 30ms (View: 14, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:10:10) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 25ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:10:19) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.4ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 24ms (View: 12, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:11:01) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 25ms (View: 12, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:11:29) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.1ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 100ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:11:58) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.1ms)
+Rendered posts/forms/_quote (1.1ms)
+Completed in 26ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:12:02) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 24ms (View: 12, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:12:18) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.4ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 24ms (View: 12, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:12:25) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 25ms (View: 12, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:12:30) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.1ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 102ms (View: 89, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:12:50) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (0.9ms)
+Completed in 25ms (View: 12, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:13:25) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.1ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 26ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:13:38) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.7ms)
+Rendered posts/forms/_post (1.0ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 30ms (View: 14, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:14:21) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.4ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 26ms (View: 12, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:16:48) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (2.3ms)
+Rendered posts/forms/_post (1.3ms)
+Rendered posts/forms/_photo (1.1ms)
+Rendered posts/forms/_quote (1.1ms)
+Completed in 108ms (View: 15, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:17:12) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.4ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 26ms (View: 12, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:17:16) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.2ms)
+Completed in 26ms (View: 12, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:17:46) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.4ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 26ms (View: 12, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:17:57) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (1.0ms)
+Rendered posts/forms/_photo (1.1ms)
+Rendered posts/forms/_quote (1.2ms)
+Completed in 31ms (View: 14, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:18:10) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 102ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:19:01) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.4ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 28ms (View: 12, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:19:07) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.4ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 27ms (View: 12, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:19:19) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.4ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.1ms)
+Completed in 27ms (View: 12, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:19:27) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.1ms)
+Completed in 28ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:19:41) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.6ms)
+Rendered posts/forms/_post (1.0ms)
+Rendered posts/forms/_photo (1.1ms)
+Rendered posts/forms/_quote (1.1ms)
+Completed in 127ms (View: 15, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:20:11) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 28ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:20:25) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.1ms)
+Completed in 28ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:20:32) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 28ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:20:53) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.1ms)
+Completed in 29ms (View: 12, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:22:07) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 30ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:22:16) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.4ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.1ms)
+Completed in 28ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:22:22) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.2ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 28ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:22:31) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.4ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.1ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 29ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:22:41) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 113ms (View: 95, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:23:28) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.4ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 30ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:23:41) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.4ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.2ms)
+Rendered posts/forms/_quote (1.1ms)
+Completed in 29ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:24:19) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.1ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 29ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:24:42) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (1.0ms)
+Rendered posts/forms/_photo (1.1ms)
+Rendered posts/forms/_quote (1.1ms)
+Completed in 35ms (View: 14, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:25:48) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.6ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.3ms)
+Rendered posts/forms/_quote (1.1ms)
+Completed in 111ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:25:54) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.6ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 29ms (View: 12, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:25:59) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.4ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 30ms (View: 12, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:26:18) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.4ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 30ms (View: 12, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:27:03) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.7ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.2ms)
+Rendered posts/forms/_quote (1.3ms)
+Completed in 35ms (View: 14, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing FeelingsController#index (for 127.0.0.1 at 2008-12-29 17:27:05) [GET]
+Rendering template within layouts/application
+Rendering feelings/index
+Rendered posts/views/_link (2.8ms)
+Rendered posts/views/_quote (0.6ms)
+Rendered posts/views/_link (1.5ms)
+Rendered posts/views/_link (0.7ms)
+Rendered posts/views/_post (2.5ms)
+Rendered posts/views/_link (0.7ms)
+Completed in 76ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:27:32) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (1.0ms)
+Rendered posts/forms/_photo (1.2ms)
+Rendered posts/forms/_quote (1.3ms)
+Completed in 36ms (View: 14, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:27:45) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.6ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.1ms)
+Completed in 39ms (View: 14, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:28:29) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.6ms)
+Rendered posts/forms/_post (1.6ms)
+Rendered posts/forms/_photo (1.2ms)
+Rendered posts/forms/_quote (1.2ms)
+Completed in 36ms (View: 14, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:28:38) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.6ms)
+Rendered posts/forms/_post (1.1ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 114ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:28:47) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 34ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:29:02) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.8ms)
+Rendered posts/forms/_post (1.1ms)
+Rendered posts/forms/_photo (1.2ms)
+Rendered posts/forms/_quote (1.2ms)
+Completed in 35ms (View: 15, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:29:07) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.4ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 32ms (View: 12, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:29:14) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.6ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.2ms)
+Completed in 112ms (View: 92, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:29:31) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.8ms)
+Rendered posts/forms/_post (1.0ms)
+Rendered posts/forms/_photo (1.2ms)
+Rendered posts/forms/_quote (2.0ms)
+Completed in 40ms (View: 16, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:29:48) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.1ms)
+Rendered posts/forms/_quote (1.1ms)
+Completed in 37ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:30:01) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 35ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:30:36) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.1ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 34ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:30:58) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.6ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.1ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 34ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:31:26) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.4ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 34ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:31:57) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 34ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:32:09) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.4ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.1ms)
+Completed in 33ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:32:20) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.7ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 117ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:32:40) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.6ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 34ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:32:55) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.4ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.1ms)
+Completed in 33ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:33:02) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.4ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (0.9ms)
+Completed in 33ms (View: 12, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:33:16) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 35ms (View: 14, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:33:34) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.5ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.1ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 37ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:34:26) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.6ms)
+Rendered posts/forms/_post (0.8ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 35ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:35:06) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.6ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 36ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:36:14) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.4ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.0ms)
+Completed in 35ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-12-29 17:36:49) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/forms/_link (1.7ms)
+Rendered posts/forms/_post (0.9ms)
+Rendered posts/forms/_photo (1.0ms)
+Rendered posts/forms/_quote (1.1ms)
+Completed in 37ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]

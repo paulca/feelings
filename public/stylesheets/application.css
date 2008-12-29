@@ -1,0 +1,14 @@
+div.main { margin-top: 2em; font-family: Georgia;}
+
+div.options ul li { font-size: 2em; display: inline; margin-right: 2em; }
+div.options ul { border-bottom: .5em solid #035292; }
+
+div.hidden { display: none; }
+
+div.type div { border-bottom: .2em solid grey; padding: 1em; background-color: #EEEEEE;}
+div.type div textarea { width: 10em; height: 2em;}
+
+div.type div.highlighted { font-size: 2em; background-color: white;}
+div.type div.highlighted label { margin-right: 2em;}
+div.type div.highlighted input.text, div.type div.highlighted textarea { font-size: 1em; }
+

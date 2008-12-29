@@ -1,12 +1,12 @@
-<h1>New post</h1>
-
-<div>
-  Choose type:
-  
-  <%= link_to 'Link', '#', :class => 'link' %>
-  <%= link_to 'Post', '#', :class => 'post' %>
-  <%= link_to 'Photo', '#', :class => 'photo' %>
-  <%= link_to 'Quote', '#', :class => 'quote' %>
+<div class="options">
+  <ul>
+    <li>Post:</li>
+    <li><%= link_to 'Link', '#', :class => 'display link' %></li>
+    <li><%= link_to 'Post', '#', :class => 'display post' %></li>
+    <li><%= link_to 'Photo', '#', :class => 'display photo' %></li>
+    <li><%= link_to 'Quote', '#', :class => 'display quote' %></li>
+    <li><%= link_to 'View site...', '/' %></li>
+  </ul>
 </div>
 
 <%= render :partial => 'posts/forms/link' %>
