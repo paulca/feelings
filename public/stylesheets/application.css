@@ -6,9 +6,13 @@ div.options ul { border-bottom: .5em solid #035292; }
 div.hidden { display: none; }
 
 div.type div { border-bottom: .2em solid grey; padding: 1em; background-color: #EEEEEE;}
-div.type div textarea { width: 10em; height: 2em;}
+div.type div textarea { width: 60em; height: 2em; }
+div.type div textarea, div.type div input { cursor: pointer; }
 
 div.type div.highlighted { font-size: 2em; background-color: white;}
 div.type div.highlighted label { margin-right: 2em;}
-div.type div.highlighted input.text, div.type div.highlighted textarea { font-size: 1em; }
+div.type div.highlighted input, div.type div.highlighted textarea { font-size: 1em; cursor: text;}
+
+div.type div.highlighted input { width: 27.7em; }
+div.type div.highlighted textarea { width: 40em; height: 10em; }
 

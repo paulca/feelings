@@ -1,22 +1,20 @@
 <div class="hidden type" id="quote">
+  <% @post.verb = 'liked' %>
   <% form_for @post, :url => @post.new_record? ? posts_url : post_url do |f| %>
-    <div>
-      <%= f.label :verb, "How did this make you feel?" %>
-      I <%= f.text_field :verb %> this:
-    </div>
-    <div>
-      <%= f.label :content, "The quote" %>
+    <div class="first">
       <%= f.text_area :content %>
     </div>
     <div>
-      <%= f.label :by, "Who was the quote by?" %>
+      <%= f.label :by, "Said by" %>
       <%= f.text_field :by %>
     </div>
     <div>
       <%= f.label :link, "A link to the quote" %>
       <%= f.text_field :link %>
     </div>
-    <%= hidden_field_tag 'post[type]', 'quote' %>
-    <%= f.submit %>
+    <div>
+      I <%= f.text_field :verb %> this:
+    </div>
+    <%= save_buttons('quote') %>
   <% end %>
 </div>

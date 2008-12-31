@@ -8,11 +8,15 @@ class PostsController < ApplicationController
   
   def new
     @post = Post.new
+    @posts = Post.by_date
   end
   
   def create
     @post = Post.new(params[:post])
     @post.date = Time.now
+    if params['save-publish']
+      @post.published = true
+    end
     if @post.save
       redirect_to new_post_path
     end
@@ -26,6 +30,9 @@ class PostsController < ApplicationController
     @post = Post.get(params[:id])
     params[:post].each do |k,v|
       @post.send("#{k}=", v)
+    end
+    if params['save-publish']
+      @post.published = true
     end
     if @post.save
       redirect_to posts_path

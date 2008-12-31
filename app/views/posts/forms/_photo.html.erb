@@ -1,6 +1,6 @@
 <div class="hidden type" id="photo">
   <% form_for @post, :url => @post.new_record? ? posts_url : post_url do |f| %>
-    <div>
+    <div class="first">
       <%= f.label :verb, "How did this make you feel?" %>
       I <%= f.text_field :verb %> this:
     </div>
@@ -16,7 +16,6 @@
       <%= f.label :content, "A bit about the photo" %>
       <%= f.text_area :content %>
     </div>
-    <%= hidden_field_tag 'post[type]', 'photo' %>
-    <%= f.submit %>
+    <%= save_buttons('photo') %>
   <% end %>
 </div>
