@@ -8,6 +8,12 @@ class Post < CouchRest::Model
   view_by :published, :date, :descending => true
   view_by :user_id, :date
 
+  view_by :not_published,
+    :map => "function(doc) {
+            if (doc['couchrest-type'] == 'Post' && !doc['published'] && doc['date']) {
+              emit([doc['published'], doc['date']], null);
+            }
+          }"
   view_by :tags,
     :map => 
       "function(doc) {
@@ -30,13 +36,25 @@ class Post < CouchRest::Model
 
   before(:create, :generate_slug_from_title)
   before(:save, :set_published_flag)
+  
   def generate_slug_from_title
     use = title.blank? ? content : title
     self['slug'] = use.downcase[0,100].gsub(/[^a-z0-9]/,'-').squeeze('-').gsub(/^\-|\-$/,'')
   end
   
   def set_published_flag
+    self.published ||= false
     self.published = true if published == '1'
+  end
+  
+  def when_published
+    if created_at.to_date == Date.today
+      return 'today'
+    elsif created_at.to_date == Date.yesterday
+      return 'yesterday'
+    else
+      return 'before'
+    end
   end
   
   def method_missing(method, *args)

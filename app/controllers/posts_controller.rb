@@ -9,10 +9,13 @@ class PostsController < ApplicationController
   
   def new
     @post = Post.new
-    @posts = Post.by_date
+    @unpublished_posts = Post.by_not_published
+    @published_posts = Post.by_published_and_date
   end
   
   def create
+    @unpublished_posts = Post.by_not_published
+    @published_posts = Post.by_published_and_date
     @post = Post.new(params[:post])
     @post.date = Time.now
     if params['save-publish']
@@ -21,6 +24,13 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to new_post_path
     end
+  end
+  
+  def publish
+    @post = Post.get(params[:id])
+    @post.published = true
+    @post.save
+    redirect_to new_post_path
   end
   
   def edit
