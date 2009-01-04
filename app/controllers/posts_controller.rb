@@ -18,6 +18,15 @@ class PostsController < ApplicationController
     @published_posts = Post.by_published_and_date
     @post = Post.new(params[:post])
     @post.date = Time.now
+    if params['attachment']
+      attachment = params["attachment"]
+      @post["_attachments"] ||= {}
+      filename = File.basename(attachment.original_filename)
+      @post["_attachments"][filename] = {
+        "content_type" => attachment.content_type,
+        "data" => attachment.read
+      }
+    end
     if params['save-publish']
       @post.published = true
     end

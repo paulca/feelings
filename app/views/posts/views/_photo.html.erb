@@ -8,7 +8,9 @@
     I <strong><%= post.verb %></strong> this:
   </p>
 
-  <img src="<%= post.path %>">
+  <%- if post._attachments -%>
+    <img src="<%= 'http://localhost:5984/' + COUCHDB['database'] + '/' + post.id + '/' + post._attachments.keys.first %>">
+  <%- end -%>
 
   <p><%= post.content %></p>
 
