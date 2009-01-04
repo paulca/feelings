@@ -1,4 +1,4 @@
-<div class="hidden type" id="post">
+<div class="type" id="post">
   <% @post.verb = 'wrote' %>
   <% form_for @post, :url => @post.new_record? ? posts_url : post_url do |f| %>
     <div class="first">

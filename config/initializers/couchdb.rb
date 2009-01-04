@@ -1,0 +1,1 @@
+COUCHDB = YAML.load_file(RAILS_ROOT + '/config/couchdb.yml')[ENV['RAILS_ENV']]

@@ -5,6 +5,7 @@ div.options ul { border-bottom: .5em solid #035292; }
 
 div.hidden { display: none; }
 
+div.new div.type { display: none; }
 div.type div { border-bottom: .2em solid grey; padding: 1em; background-color: #EEEEEE;}
 div.type div textarea { width: 60em; height: 2em; }
 div.type div textarea, div.type div input { cursor: pointer; }

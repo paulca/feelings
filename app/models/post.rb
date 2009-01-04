@@ -1,7 +1,7 @@
 require 'couchrest'
 class Post < CouchRest::Model
   
-  use_database CouchRest.database!('http://localhost:5984/couchrest-model-test')
+  use_database CouchRest.database!(COUCHDB['database'])
   unique_id :slug
 
   view_by :date, :descending => true

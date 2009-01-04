@@ -1,0 +1,5 @@
+development:
+  database: feelings_development
+  
+production:
+  database: feelings_production

@@ -1,10 +1,12 @@
 function highlight(element){
   $('div.highlighted').removeClass('highlighted')
   $(element).parents('div:first').addClass('highlighted')
+  element.select()
 }
 
 function unhighlight(element){
   $(element).parents('div:first').removeClass('highlighted')
+  $('div.first').addClass('highlighted')
 }
 
 $(document).ready(function(){

@@ -1,4 +1,4 @@
-<div class="hidden type" id="quote">
+<div class="type" id="quote">
   <% @post.verb = 'liked' %>
   <% form_for @post, :url => @post.new_record? ? posts_url : post_url do |f| %>
     <div class="first">

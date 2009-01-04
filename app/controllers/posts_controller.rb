@@ -4,6 +4,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.by_date
+    redirect_to new_post_path
   end
   
   def new
@@ -30,6 +31,15 @@ class PostsController < ApplicationController
     @post = Post.get(params[:id])
     params[:post].each do |k,v|
       @post.send("#{k}=", v)
+    end
+    if params['attachment']
+      attachment = params["attachment"]
+      @post["_attachments"] ||= {}
+      filename = File.basename(attachment.original_filename)
+      @post["_attachments"][filename] = {
+        "content_type" => attachment.content_type,
+        "data" => attachment.read
+      }
     end
     if params['save-publish']
       @post.published = true
