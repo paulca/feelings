@@ -46,6 +46,11 @@ class PostsController < ApplicationController
     @post = Post.get(params[:id])
   end
   
+  def attachment
+    @post = Post.get(params[:id])
+    send_data RestClient.get('http://localhost:5984/' + COUCHDB['database'] + '/' + @post.id + '/' + @post._attachments.keys.first)
+  end
+  
   def update
     @post = Post.get(params[:id])
     params[:post].each do |k,v|

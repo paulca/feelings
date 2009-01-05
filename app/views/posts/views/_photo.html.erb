@@ -9,7 +9,7 @@
   </p>
 
   <%- if post._attachments -%>
-    <img src="<%= 'http://localhost:5984/' + COUCHDB['database'] + '/' + post.id + '/' + post._attachments.keys.first %>">
+    <img src="<%= attachment_post_path(post.id) %>">
   <%- end -%>
 
   <p><%= post.content %></p>
