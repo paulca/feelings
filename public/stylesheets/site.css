@@ -1,7 +1,7 @@
 /*body { background-image:url('/images/grid.png');}*/
 /*body { background-image:url('../images/face.gif');}*/
 
-div.main { text-align: center; width: 90%; margin-top:12em; font-family:Georgia, "Times New Roman"; word-spacing:.2em; letter-spacing:.1em;}
+div.main { text-align: center; width: 90%; margin-top:15em; font-family:Georgia, "Times New Roman"; word-spacing:.2em; letter-spacing:.1em;}
 .blue { background-color: blue;}
 
 /*.passionate { border-left: .5em solid #CC0000; }
@@ -35,3 +35,5 @@ div.main { text-align: center; width: 90%; margin-top:12em; font-family:Georgia,
 .something blockquote { margin-top: 0em; margin-bottom: 0; padding-top: .4em;}
 .something ol li, .something ul li { line-height: 1.99em; margin-bottom: 0; padding-bottom: 0; margin-top: 0; word-spacing:.2em; letter-spacing:.05em; text-align: justify; margin-bottom: 2em;}
 .something ol, .something ul { padding:0; margin-left: 4em; margin-bottom: 0;}
+
+.nonsense { padding: 2em; }

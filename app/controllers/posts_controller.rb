@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   
-  layout 'posts', :except => [:index, :show]  
+  layout 'posts', :except => [:index, :show]
+  before_filter :require_password, :except => "show"
 
   def index
     @posts = Post.by_date
@@ -33,6 +34,11 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to new_post_path
     end
+  end
+  
+  def show
+    @posts = [Post.get(params[:id])]
+    render :layout => 'application', :template => 'feelings/index'
   end
   
   def publish
@@ -78,4 +84,12 @@ class PostsController < ApplicationController
     @post.destroy
     redirect_to posts_path
   end
+  
+protected
+  def require_password
+    authenticate_or_request_with_http_basic do |username, password|
+      username == SETTINGS['username'] && password == SETTINGS['password']
+    end
+  end
+
 end
