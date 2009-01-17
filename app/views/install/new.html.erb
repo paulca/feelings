@@ -1,0 +1,46 @@
+<h2>You are about to install Feelings</h2>
+
+<p>Hi!</p>
+
+<p>I hope you're feeling well.</p>
+
+<p>You're nearly ready to go</p>
+
+<% form_for @install, :url => install_path do |f| -%>
+  <fieldset>
+    
+    <%- unless @install.errors.empty? -%>
+      <ul>
+        <%- @install.errors.each do |error| -%>
+          <li><%= error %></li>
+        <%- end -%>
+      </ul>
+    <%- end -%>
+    
+    <h2>Choose your CouchDB database for Feelings</h2>
+    <div>
+      <%= f.label :development_database, "Development Database" %>
+      <%= f.text_field :development_database %>
+    </div>
+    
+    <div>
+      <%= f.label :production_database, "Production Database" %>
+      <%= f.text_field :production_database %>
+    </div>
+    
+    <h2>Choose a username and password</h2>
+    
+    <div>
+      <%= f.label :username, "Username" %>
+      <%= f.text_field :username %>
+    </div>
+    
+    <div>
+      <%= f.label :password, "Password" %>
+      <%= f.password_field :password %>
+    </div>
+    
+    <%= f.submit "Save" %>
+  </fieldset>
+<% end -%>
+

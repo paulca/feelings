@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  
+
+  before_filter :check_settings  
   layout 'posts', :except => [:index, :show]
   before_filter :require_password, :except => "show"
 
