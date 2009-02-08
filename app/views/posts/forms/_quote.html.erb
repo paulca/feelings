@@ -1,19 +1,19 @@
 <div class="type" id="quote">
-  <% @post.verb = 'liked' %>
+  <% @post.stuffing['verb'] = 'liked' %>
   <% form_for @post, :url => @post.new_record? ? posts_url : post_url do |f| %>
     <div class="first">
-      <%= f.text_area :content %>
+      <%= f.text_area :stuffing_content %>
     </div>
     <div>
-      <%= f.label :by, "Said by" %>
-      <%= f.text_field :by %>
+      <%= f.label :stuffing_by, "Said by" %>
+      <%= f.text_field :stuffing_by %>
     </div>
     <div>
-      <%= f.label :link, "A link to the quote" %>
-      <%= f.text_field :link %>
+      <%= f.label :stuffing_link, "A link to the quote" %>
+      <%= f.text_field :stuffing_link %>
     </div>
     <div>
-      I <%= f.text_field :verb %> this:
+      I <%= f.text_field :stuffing_verb %> this:
     </div>
     <%= save_buttons('quote') %>
   <% end %>

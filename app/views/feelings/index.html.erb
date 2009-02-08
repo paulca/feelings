@@ -12,7 +12,7 @@
   <div class="this is where i put stuff">
 
     <%- @posts.each do |post| -%>
-      <%= render :partial => "posts/views/#{post.type}", :locals => {:post => post} %>
+      <%= render :partial => "posts/views/#{post.post_type}", :locals => {:post => post} %>
     <%- end -%>
 
   </div>

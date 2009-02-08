@@ -1,19 +1,19 @@
 <div class="type" id="link">
   <% form_for @post, :url => @post.new_record? ? posts_url : post_url do |f| %>
     <div class="first">
-      <%= f.label :link, "http://" %>
-      <%= f.text_field :link %>
+      <%= f.label 'stuffing_link', "http://" %>
+      <%= f.text_field 'stuffing_link' %>
     </div>
     <div>
       <%= f.label :title, "Title" %>
       <%= f.text_field :title %>
     </div>
     <div>
-      I <%= f.text_field :verb %> this:
+      I <%= f.text_field :stuffing_verb %> this:
     </div>
     <div>
-      <%= f.label :content, "A bit about the link" %>
-      <%= f.text_area :content %>
+      <%= f.label :stuffing_content, "A bit about the link" %>
+      <%= f.text_area :stuffing_content %>
     </div>
     <%= save_buttons('link') %>
   <% end %>

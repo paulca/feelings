@@ -1,15 +1,15 @@
 <div class="type" id="post">
-  <% @post.verb = 'wrote' %>
+  <% @post.stuffing['verb'] = 'wrote' %>
   <% form_for @post, :url => @post.new_record? ? posts_url : post_url do |f| %>
     <div class="first">
-      <%= f.text_area :content %>
+      <%= f.text_area :stuffing_content %>
     </div>
     <div>
       <%= f.label :title, "Title" %>
       <%= f.text_field :title %>
     </div>
     <div>
-      I <%= f.text_field :verb %> this:
+      I <%= f.text_field :stuffing_verb %> this:
     </div>
     <%= save_buttons('post') %>
   <% end %>

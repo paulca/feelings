@@ -1,0 +1,7 @@
+
+development:
+  adapter: mysql
+  database: feelings_development
+  username: root
+  password: 
+  host: localhost

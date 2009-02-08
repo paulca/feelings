@@ -1,24 +1,24 @@
 <div class="type" id="photo">
   <% form_for @post, :url => (@post.new_record? ? posts_url : post_url), :html => {:multipart => true} do |f| %>
     <div class="first">
-      <%= f.label :verb, "How did this make you feel?" %>
-      I <%= f.text_field :verb %> this:
+      <%= f.label :stuffing_verb, "How did this make you feel?" %>
+      I <%= f.text_field :stuffing_verb %> this:
     </div>
     <div>
       <%= f.label :title, "Title" %>
       <%= f.text_field :title %>
     </div>
     <div>
-      <%= f.label :path, "Link" %>
-      <%= f.text_field :path %>
+      <%= f.label :stuffing_path, "Link" %>
+      <%= f.text_field :stuffing_path %>
     </div>
     <div>
-      <%= label_tag :attachment, "Image" %>
-      <%= file_field_tag :attachment %>
+      <%= label_tag :stuffing_attachment, "Image" %>
+      <%= file_field_tag :stuffing_attachment %>
     </div>
     <div>
-      <%= f.label :content, "A bit about the photo" %>
-      <%= f.text_area :content %>
+      <%= f.label :stuffing_content, "A bit about the photo" %>
+      <%= f.text_area :stuffing_content %>
     </div>
     <%= save_buttons('photo') %>
   <% end %>

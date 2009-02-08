@@ -34,9 +34,9 @@
 
       <%- @unpublished_posts.each do |post| -%>
         <tr>
-          <td><%= post.type %></td>
+          <td><%= post.post_type %></td>
           <td><%= post.title %></td>
-          <td><%= link_to post.content[0,100] + ((post.content.size > 100) ? '...' : ''), edit_post_path(post.id) %></td>
+          <td><%= link_to post.stuffing['content'][0,100] + ((post.stuffing['content'].size > 100) ? '...' : ''), edit_post_path(post.id) %></td>
           <td><%= post.published ? 'yes' : '' %></td>
           <td><%= link_to 'publish', publish_post_path(post.id) %></td>
         </tr>
@@ -63,9 +63,9 @@
         </tr>
         <%- posts.each do |post| -%>
           <tr>
-            <td><%= post.type %></td>
-            <td><%= post.title %></td>
-            <td><%= link_to post.content[0,100] + ((post.content.size > 100) ? '...' : ''), edit_post_path(post.id) %></td>
+            <td><%= post.post_type %></td>
+            <td><%= post.stuffing['title'] %></td>
+            <td><%= link_to post.stuffing['content'][0,100] + ((post.stuffing['content'].size > 100) ? '...' : ''), edit_post_path(post.id) %></td>
           </tr>
         <%- end -%>
       <%- end -%>
