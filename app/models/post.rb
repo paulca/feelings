@@ -1,4 +1,7 @@
 class Post < ActiveRecord::Base
+  
+  has_many :assets
+  
   stuffing
   
   has_attached_file :image, 

@@ -5,6 +5,7 @@ class CreateAssets < ActiveRecord::Migration
       t.string :file_content_type
       t.integer :file_file_size
       t.datetime :file_updated_at
+      t.integer :post_id
 
       t.timestamps
     end
