@@ -4,7 +4,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :title
       t.string :slug
       t.string :post_type
-      t.boolean :published
+      t.boolean :published, :default => false
 
       t.timestamps
     end
