@@ -4,15 +4,15 @@
   </p>
 
   <p class="about">
-    I <strong><%= post.verb %></strong> this:
+    I <strong><%= post.stuffing_verb %></strong> this:
   </p>
   
-  <blockquote><%= post.content %></blockquote>
+  <blockquote><%= post.stuffing_content %></blockquote>
   
-  <% if post.link.blank? %>
-    <p><strong><%= post.by %></strong></p>
+  <% if post.stuffing_link.blank? %>
+    <p><strong><%= post.stuffing_by %></strong></p>
   <% else %>
-    <p><strong><%= link_to post.by, post.link %></strong></p>
+    <p><strong><%= link_to post.stuffing_by, post.stuffing_link %></strong></p>
   <% end %>
 
 </div>

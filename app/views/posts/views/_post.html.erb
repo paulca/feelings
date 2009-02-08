@@ -4,12 +4,12 @@
   </p>
 
   <p class="about">
-    I <strong><%= post.verb %></strong> this:
+    I <strong><%= post.stuffing_verb %></strong> this:
   </p>
           
   <h3><%= link_to post.title, post_url(post.id) %></h3>
           
-  <%= textilize(post.content) %>
+  <%= textilize(post.stuffing_content) %>
 
 </div>
 

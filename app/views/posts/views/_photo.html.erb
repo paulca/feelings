@@ -5,14 +5,14 @@
   </p>
 
   <p class="about">
-    I <strong><%= post.stuffing.verb %></strong> this:
+    I <strong><%= post.stuffing_verb %></strong> this:
   </p>
 
-  <%- if post._attachments -%>
+  <%- if post.stuffing['_attachments'] -%>
     <img src="<%= attachment_post_path(post.id) %>">
   <%- end -%>
 
-  <p><%= post.content %></p>
+  <p><%= post.stuffing_content %></p>
 
 </div>
 
