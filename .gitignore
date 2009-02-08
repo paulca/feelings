@@ -2,3 +2,4 @@ log/*
 config/couchdb.yml
 config/settings.yml
 db/schema.rb
+public/system
