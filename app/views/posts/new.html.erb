@@ -65,7 +65,7 @@
           <tr>
             <td><%= post.post_type %></td>
             <td><%= post.stuffing['title'] %></td>
-            <td><%= link_to post.stuffing['content'][0,100] + ((post.stuffing['content'].size > 100) ? '...' : ''), edit_post_path(post.id) %></td>
+            <td><%= link_to post.stuffing_content.to_s[0,100] + ((post.stuffing_content.to_s.size > 100) ? '...' : ''), edit_post_path(post.id) %></td>
           </tr>
         <%- end -%>
       <%- end -%>

@@ -1,5 +1,20 @@
 <div class="type" id="photo">
   <% form_for @post, :url => (@post.new_record? ? posts_url : post_url), :html => {:multipart => true} do |f| %>
+    <%- f.fields_for :assets do |asset_form| -%>
+      <% if asset_form.object.file_file_name.blank? %>
+        <div>
+          <%= asset_form.label :file, "Image" %>
+          <%= asset_form.file_field :file %>
+        </div>
+      <%- end -%>
+    <%- end -%>
+    <div>
+    <%- if @post.assets.not.empty? and @post.assets.first.file_file_name.not.blank? -%>
+      <%= image_tag @post.assets.first.file.url(:thumb) %>
+      <%= link_to 'Remove image', post_path(@post, :remove_image => true), :method => :put %>
+    <%- end -%>
+    </div>
+
     <div class="first">
       <%= f.label :stuffing_verb, "How did this make you feel?" %>
       I <%= f.text_field :stuffing_verb %> this:
@@ -11,10 +26,6 @@
     <div>
       <%= f.label :stuffing_path, "Link" %>
       <%= f.text_field :stuffing_path %>
-    </div>
-    <div>
-      <%= label_tag :stuffing_attachment, "Image" %>
-      <%= file_field_tag :stuffing_attachment %>
     </div>
     <div>
       <%= f.label :stuffing_content, "A bit about the photo" %>

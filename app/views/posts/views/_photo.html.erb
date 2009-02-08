@@ -8,8 +8,8 @@
     I <strong><%= post.stuffing_verb %></strong> this:
   </p>
 
-  <%- if post.stuffing['_attachments'] -%>
-    <img src="<%= attachment_post_path(post.id) %>">
+  <%- if post.assets.not.empty? and post.assets.first.file_file_name.not.blank? -%>
+    <%= image_tag(post.assets.first.file.url(:medium)) %>
   <%- end -%>
 
   <p><%= post.stuffing_content %></p>

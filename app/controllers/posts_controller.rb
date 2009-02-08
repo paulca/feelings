@@ -11,6 +11,7 @@ class PostsController < ApplicationController
   
   def new
     @post = Post.new
+    @post.assets.build
     @unpublished_posts = Post.all(:conditions => {:published => false})
     @published_posts = Post.all(:conditions => {:published => true})
   end
@@ -24,7 +25,12 @@ class PostsController < ApplicationController
     end
     if @post.save
       redirect_to new_post_path
+    else
+      render :action => 'new'
     end
+  rescue RestClient::RequestFailed
+    flash[:notice] = 'There was an error saving the fields. Check your database.'
+    render :action => 'new'
   end
   
   def show
@@ -41,6 +47,7 @@ class PostsController < ApplicationController
   
   def edit
     @post = Post.find(params[:id])
+    @post.assets.build if @post.assets.empty?
   end
   
   def attachment
@@ -49,9 +56,11 @@ class PostsController < ApplicationController
   end
   
   def update
-    @post = Post.get(params[:id])
-    params[:post].each do |k,v|
-      @post.send("#{k}=", v)
+    @post = Post.find(params[:id])
+    @post.update_attributes(params[:post])
+    if params['remove_image']
+      
+      @post.assets.destroy_all
     end
     if params['save-publish']
       @post.published = true
@@ -59,6 +68,9 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to posts_path
     end
+  rescue RestClient::RequestFailed
+    flash[:notice] = 'There was an error saving the fields. Check your database.'
+    render :action => 'edit'
   end
   
   def destroy
