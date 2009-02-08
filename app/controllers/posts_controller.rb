@@ -19,15 +19,6 @@ class PostsController < ApplicationController
     @unpublished_posts = Post.all(:conditions => {:published => false})
     @published_posts = Post.all(:conditions => {:published => true})
     @post = Post.new(params[:post])
-    if params['attachment']
-      attachment = params["attachment"]
-      @post["_attachments"] ||= {}
-      filename = File.basename(attachment.original_filename)
-      @post["_attachments"][filename] = {
-        "content_type" => attachment.content_type,
-        "data" => attachment.read
-      }
-    end
     if params['save-publish']
       @post.published = true
     end
@@ -61,15 +52,6 @@ class PostsController < ApplicationController
     @post = Post.get(params[:id])
     params[:post].each do |k,v|
       @post.send("#{k}=", v)
-    end
-    if params['attachment']
-      attachment = params["attachment"]
-      @post["_attachments"] ||= {}
-      filename = File.basename(attachment.original_filename)
-      @post["_attachments"][filename] = {
-        "content_type" => attachment.content_type,
-        "data" => attachment.read
-      }
     end
     if params['save-publish']
       @post.published = true
