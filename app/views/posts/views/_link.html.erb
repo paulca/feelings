@@ -12,7 +12,7 @@
   <% if post.stuffing_link.not.blank? %>
     <p class="link goes here"><%= link_to post.stuffing_link, post.stuffing_link %></a></p>
   <% end %>
-  <%= textilize(post.stuffing_content) %>
+  <%= post.stuffing_content %>
 </div>
 
 <hr />
