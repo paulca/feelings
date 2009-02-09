@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom">
+  <title>PABCAS, Thoughts, links, pictures on music, food, wine, film, tech etc.</title>
+  <id>tag:www.pabcas.com,2009:feelings/</id>
+  <generator version="1" uri="http://github.com/paulca/feelings">Feelings</generator>
+  <link href="http://www.pabcas.com/index.xml" rel="self" type="application/atom+xml"/>
+  <link href="http://www.pabcas.com/" rel="alternate" type="text/html"/>
+  <updated><%= @posts.first.updated_at %></updated>
+  <% @posts.each do |post| %>
+    <entry xml:base="http://www.pabcas.com/">
+      <author>
+        <name>Paul Campbell</name>
+      </author>
+      <id>tag:www.pabcas.com,<% post.created_at %></id>
+      <published><%= post.created_at %></published>
+      <updated><%= post.updated_at %></updated>
+      <link href="http://www.pabcas.com/posts/<%= post.id %>" rel="alternate" type="text/html"/>
+      <title><%= post.title %></title>
+      <content type="html">
+        <%= render :partial => "posts/views/#{post.post_type}.html", :locals => {:post => post} %>
+      </content>
+    </entry>
+  <%- end -%>
+</feed>
