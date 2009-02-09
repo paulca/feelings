@@ -66,7 +66,7 @@ class PostsController < ApplicationController
       @post.published = true
     end
     if @post.save
-      redirect_to posts_path
+      redirect_to edit_post_path(@post)
     end
   rescue RestClient::RequestFailed
     flash[:notice] = 'There was an error saving the fields. Check your database.'
