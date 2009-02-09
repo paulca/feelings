@@ -7,7 +7,7 @@
     I <strong><%= post.stuffing_verb %></strong> this:
   </p>
           
-  <h3><%= link_to post.title, post_url(post.id) %></h3>
+  <h3><%= link_to post.title, slug_url(post.slug) %></h3>
           
   <%= post.stuffing_content %>
 

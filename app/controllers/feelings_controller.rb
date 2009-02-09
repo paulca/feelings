@@ -10,4 +10,9 @@ class FeelingsController < ApplicationController
     end
   end
   
+  def show
+    @posts = [Post.find_by_slug(params[:slug])]
+    render :action => 'index'
+  end
+  
 end
