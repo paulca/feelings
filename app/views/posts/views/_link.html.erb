@@ -7,7 +7,7 @@
     I <strong><%= post.stuffing_verb %></strong> this:
   </p>
 
-  <h3><%= link_to post.stuffing_title, post.stuffing_link %></h3>
+  <h3><%= link_to post.title, post.stuffing_link %></h3>
   
   <% if post.stuffing_link.not.blank? %>
     <p class="link goes here"><%= link_to post.stuffing_link, post.stuffing_link %></a></p>
