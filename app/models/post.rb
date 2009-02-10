@@ -14,7 +14,7 @@ class Post < ActiveRecord::Base
   end
   
   def generate_slug_from_title
-    use = title.blank? ? id : title
+    use = title.blank? ? Time.now.to_i.to_s : title
     self.slug ||= use.downcase[0,100].gsub(/[^a-z0-9]/,'-').squeeze('-').gsub(/^\-|\-$/,'')
   end
 end
