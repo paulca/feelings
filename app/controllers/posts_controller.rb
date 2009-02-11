@@ -5,15 +5,15 @@ class PostsController < ApplicationController
   before_filter :require_password, :except => "show"
 
   def index
-    @posts = Post.all
+    @posts = Post.all(:order => 'created_at DESC')
     redirect_to new_post_path
   end
   
   def new
     @post = Post.new
     @post.assets.build
-    @unpublished_posts = Post.all(:conditions => {:published => false})
-    @published_posts = Post.all(:conditions => {:published => true})
+    @unpublished_posts = Post.all(:conditions => {:published => false}, :order => 'created_at DESC')
+    @published_posts = Post.all(:conditions => {:published => true}, :order => 'created_at DESC')
   end
   
   def create
