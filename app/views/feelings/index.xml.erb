@@ -15,9 +15,9 @@
       <published><%= post.created_at.strftime("%Y-%m-%dT%k:%M:%SZ") %></published>
       <updated><%= post.updated_at.strftime("%Y-%m-%dT%k:%M:%SZ") %></updated>
       <link href="http://www.pabcas.com/posts/<%= post.id %>" rel="alternate" type="text/html"/>
-      <title><%= post.title %></title>
+      <title><%= post.title.blank? ? "I #{post.stuffing_verb} this" : post.title %></title>
       <content type="html">
-        <%= render :partial => "posts/views/#{post.post_type}.html", :locals => {:post => post} %>
+        <%= post.stuffing_content %>
       </content>
     </entry>
   <%- end -%>
