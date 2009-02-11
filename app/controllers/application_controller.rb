@@ -14,6 +14,10 @@ class ApplicationController < ActionController::Base
   # from your application log (in this case, all fields with names like "password"). 
   # filter_parameter_logging :password
   
+  def redirect_to_old
+    redirect_to :host => 'old.pabcas.com'
+  end
+  
 private
   def check_settings
     if not defined?(SETTINGS)

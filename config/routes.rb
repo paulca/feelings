@@ -5,4 +5,5 @@ ActionController::Routing::Routes.draw do |map|
   map.admin '/admin', :controller => 'posts', :action => 'new'
   map.feed '/feed/atom.:format', :controller => 'feelings', :action => 'index'
   map.slug "/feeling/:slug", :controller => 'feelings', :action => 'show', :slug => /.*/
+  map.everything_else '*path', :controller => 'feelings', :action => 'redirect_to_old'
 end
