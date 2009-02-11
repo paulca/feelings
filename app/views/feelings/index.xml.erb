@@ -5,15 +5,15 @@
   <generator version="1" uri="http://github.com/paulca/feelings">Feelings</generator>
   <link href="http://www.pabcas.com/feed/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="http://www.pabcas.com/" rel="alternate" type="text/html"/>
-  <updated><%= @posts.first.updated_at.strftime("%Y-%m-%dT%k:%M:%SZ") %></updated>
+  <updated><%= @posts.first.updated_at.strftime("%Y-%m-%dT%H:%M:%SZ") %></updated>
   <% @posts.each do |post| %>
     <entry xml:base="http://www.pabcas.com/">
       <author>
         <name>Paul Campbell</name>
       </author>
       <id>tag:www.pabcas.com,2009:<%= post.id %></id>
-      <published><%= post.created_at.strftime("%Y-%m-%dT%k:%M:%SZ") %></published>
-      <updated><%= post.updated_at.strftime("%Y-%m-%dT%k:%M:%SZ") %></updated>
+      <published><%= post.created_at.strftime("%Y-%m-%dT%H:%M:%SZ") %></published>
+      <updated><%= post.updated_at.strftime("%Y-%m-%dT%H:%M:%SZ") %></updated>
       <link href="http://www.pabcas.com/feeling/<%= post.slug %>" rel="alternate" type="text/html"/>
       <title><%= post.title.blank? ? "I #{post.stuffing_verb} this" : post.title %></title>
       <content type="html">
