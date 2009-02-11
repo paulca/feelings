@@ -17,7 +17,7 @@
       <link href="http://www.pabcas.com/feeling/<%= post.slug %>" rel="alternate" type="text/html"/>
       <title><%= post.title.blank? ? "I #{post.stuffing_verb} this" : post.title %></title>
       <content type="html">
-        <%= post.stuffing_content %>
+        <%= sanitize post.stuffing_content %>
       </content>
     </entry>
   <%- end -%>
