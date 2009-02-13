@@ -10,7 +10,7 @@
   <h3><%= link_to post.title, post.stuffing_link %></h3>
   
   <% if post.stuffing_link.not.blank? %>
-    <p class="link goes here"><%= link_to post.stuffing_link, post.stuffing_link %></a></p>
+    <p class="link goes here"><%= link_to post.stuffing_link, "http://#{post.stuffing_link}" %></a></p>
   <% end %>
   <%= post.stuffing_content %>
 </div>
