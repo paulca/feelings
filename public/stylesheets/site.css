@@ -2,7 +2,6 @@
 /*body { background-image:url('../images/face.gif');}*/
 
 div.main { text-align: center; width: 90%; margin-top:15em; font-family:Georgia, "Times New Roman"; word-spacing:.2em; letter-spacing:.1em;}
-div.main p { text-align: left;}
 .blue { background-color: blue;}
 
 /*.passionate { border-left: .5em solid #CC0000; }
@@ -28,7 +27,7 @@ div.main p { text-align: left;}
 .stuff a:hover { background-color: #035292; color: #EEEEEE; }
 
 .this hr{ margin-top: 3.8em; margin-bottom: 4.25em; }
-.stuff div.something { font-size: 1.5em; }
+.stuff div.something { font-size: 1.5em; text-align: left; }
 .something h3 { margin-top: 0em; margin-bottom: .55em; text-align: left; line-height: 1.2em; margin-bottom:.3em;}
 .something p.about { text-align: left; color: #333333; padding-top: .3em; padding-bottom: .3em; line-height: 1.4em; margin-bottom: 0; }
 .something p.link { padding-top: 0; margin-bottom: 0em; line-height: 2em; margin-bottom: 0;}
