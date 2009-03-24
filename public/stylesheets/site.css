@@ -2,6 +2,7 @@
 /*body { background-image:url('../images/face.gif');}*/
 
 div.main { text-align: center; width: 90%; margin-top:15em; font-family:Georgia, "Times New Roman"; word-spacing:.2em; letter-spacing:.1em;}
+div.main p { text-align: left;}
 .blue { background-color: blue;}
 
 /*.passionate { border-left: .5em solid #CC0000; }
