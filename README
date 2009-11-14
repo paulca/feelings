@@ -6,14 +6,27 @@ Getting up and running is simple:
 
 git clone git://github.com/paulca/feelings.git
 
-2) Edit config/couchdb.yml if you need to
+2) Create the database
+
+rake db:create
+
+3) Create the tables:
+
+rake db:schema:load
 
 3) Fire up CouchDB
 
-4) Fire up the Rails app:
+couchdb
+
+4) Edit your config files
+
+cp config/settings.yml.example config/settings.yml
+cp config/couchdb.yml.example config/couchdb.yml
+
+5) Fire up the Rails app:
 
 script/server
 
 See your posts here: http://localhost:3000/
 
-Manager your posts here: http://localhost:3000/posts/new
+Manage your posts here: http://localhost:3000/posts/new
