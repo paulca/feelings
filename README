@@ -6,24 +6,28 @@ Getting up and running is simple:
 
 git clone git://github.com/paulca/feelings.git
 
-2) Create the database
+2) Install couchrest
+
+gem install couchrest
+
+3) Create the database
 
 rake db:create
 
-3) Create the tables:
+4) Create the tables:
 
 rake db:schema:load
 
-3) Fire up CouchDB
+5) Fire up CouchDB
 
 couchdb
 
-4) Edit your config files
+6) Edit your config files
 
 cp config/settings.yml.example config/settings.yml
 cp config/couchdb.yml.example config/couchdb.yml
 
-5) Fire up the Rails app:
+7) Fire up the Rails app:
 
 script/server
 
