@@ -12,6 +12,8 @@ class FeelingsController < ApplicationController
   
   def show
     @posts = [Post.find_by_slug(params[:slug])]
+    post = @posts.first
+    @page_title = post.title.blank? ? "I #{post.stuffing_verb} this" : post.title
     render :action => 'index'
   end
   
