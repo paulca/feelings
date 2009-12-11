@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <title><%= yield :page_title %>PABCAS — Thoughts, links, pictures on music, food, wine, film, tech etc. I chose Keller over Scoble.</title>
+    <title><%= "@page_title | " unless @page_title.blank? %>PABCAS — Thoughts, links, pictures on music, food, wine, film, tech etc. I chose Keller over Scoble.</title>
      <link  href="/stylesheets/reset-min.css" rel="stylesheet" type="text/css">
      <link  href="/stylesheets/grid-min.css" rel="stylesheet" type="text/css">
      <link  href="/stylesheets/type-min.css" rel="stylesheet"  type="text/css">
